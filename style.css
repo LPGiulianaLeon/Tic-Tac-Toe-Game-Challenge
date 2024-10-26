@@ -1,0 +1,190 @@
+
+body {
+    font-family: 'Chewy', cursive;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://codetheworld.io/wp-content/uploads/2024/09/bg-1.jpeg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 40px;
+    
+}
+
+h2 {
+    color: white;
+    
+}
+
+h1 {
+    font-size: 4rem;
+    background: linear-gradient(90deg, #ff6b6b, #fbc531, #44bd32, #273c75);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin: 0px;
+}
+
+
+.game-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    gap: 50px; 
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.player-div {
+
+    justify-content: center;
+    align-items: center;
+    width: 80%; 
+    height: 100%;
+    background-color: rgba(146, 178, 238, 0.8); 
+    padding: 20px;
+
+    border-radius: 10px;
+    text-align: center;
+    
+    color: #333;
+    font-size: 30px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    background-color: rgb(235, 149, 216);
+    border: 10px solid rgb(235, 149, 216);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 6px 19px rgba(0, 0, 0, 0.75);
+}
+
+
+.cell {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    cursor: pointer;
+    background-color: #dcdcdc;
+}
+
+
+.winning-cell {
+    background-color: #ffeb3b; 
+    color: black;
+    font-weight: bold;
+    border: 3px solid #f39c12; 
+}
+
+
+.result-text {
+    color: white;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+
+#reset-btn {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px 40px;
+    background-color: #f39c12;
+    color: white;
+    font-size: 40px;
+    font-family: 'Chewy', cursive;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#reset-btn:hover {
+    transform: scale(1.1);
+}
+
+#player1-name, #player2-name {
+    width: 95%;
+    height: 40px;
+    border: solid 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#player-computer {
+    
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+#player-computer:hover {
+    transform: scale(1.1);
+}
+.game-finished {
+    text-align: center; 
+    margin-top: 20px; 
+   
+}
+
+@media (max-width: 900px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center; 
+        gap: 20px; 
+    }
+
+    .player-div {
+        width: 80%; 
+        height: 300px;
+        padding: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+
+        font-size: 1.5rem; 
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 130px); 
+        grid-template-rows: repeat(3, 130px);
+    }
+
+    .cell {
+        font-size: 2rem; 
+    }
+
+    #reset-btn {
+        font-size: 20px; 
+    }
+
+    .result-text {
+        font-size: 30px; 
+    }
+}
